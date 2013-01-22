@@ -1,0 +1,13 @@
+This is a simple program to sort references given in biblio.tex file according to their first usage in the .ps file
+(initially written to sort the references in my PhD thesis).
+
+Input: biblio.tex; thesis.ps
+Output: sorted bib_sorted.tex
+
+The files are ard-coded for now. The algorithm the programs uses is as follows:
+ - build the reference database based on the biblio.tex file.
+    Note: for now the references and their names are saved as separate arrays. A hash map would be faster and more convenient of course, but...
+ - read the .ps file and create a list of reference names sorted by the first usage in the file
+ - write the output file bib_sorted.tex by writing the references from the database according to their appearance from the previous step
+
+This is pretty much it. No more magic in it... Good luck using!
